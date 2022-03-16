@@ -126,10 +126,7 @@ body {
     position       : relative;
 }
 
-.navigation:nth-last-child {
-    margin : 0;
-    padding: 0;
-}
+
 
 .page-header {
     position: relative;
@@ -878,10 +875,6 @@ body {
     flex-wrap     : wrap;
     flex-direction: column;
 
-}
-
-.hotel-description:nth-last-child {
-    margin-bottom: 0;
 }
 
 .hotel-description-text {
