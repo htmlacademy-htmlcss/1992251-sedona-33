@@ -54,8 +54,6 @@ body {
     overflow: hidden;
 }
 
-/* Modal window */
-
 .modal-container {
     position        : fixed;
     top             : 0;
@@ -143,7 +141,7 @@ body {
     display        : flex;
     justify-content: left;
     align-items    : center;
-    margin         : -9px 0 10px 157px;
+    margin         : -10px 0 10px 157px;
     padding        : 0;
     font-weight    : 400;
     font-size      : 16px;
@@ -151,7 +149,8 @@ body {
 }
 
 .modal-inscription-color {
-    color: #FF5757;
+    margin: -7px 0 10px 157px;
+    color : #FF5757;
 }
 
 .hotel-form-field {
@@ -235,13 +234,11 @@ body {
 }
 
 ::-webkit-input-placeholder {
-    /* WebKit browsers */
     color: rgba(0, 0, 0, 0.6);
 }
 
 ::-moz-placeholder {
-    /* Mozilla Firefox */
-    color  : #000;
+    color  : #000000;
     opacity: 0.6
 }
 
@@ -299,29 +296,29 @@ body {
 
 .button-plus:focus-visible {
     outline: none;
-   }
+}
 
 .button-plus:focus-visible .button-quantity-change {
-    outline       : 3px solid #83B3D3;    
-    border-radius: 4px;    
+    outline      : 3px solid #83B3D3;
+    border-radius: 4px;
 }
 
 .button-minus:focus-visible {
     outline: none;
-   }
+}
 
 .button-minus:focus-visible .button-quantity-change {
-    outline       : 3px solid #83B3D3;    
-    border-radius: 4px;    
+    outline      : 3px solid #83B3D3;
+    border-radius: 4px;
 }
 
 .button-quantity-change:active .quantity-change-icon {
-    fill: #000000;
+    fill   : #000000;
     opacity: 0.2;
 }
 
 .button-quantity-change:active .quantity-change-icon-plus {
-    fill: #000000;
+    fill   : #000000;
     opacity: 0.2;
 }
 
@@ -471,7 +468,6 @@ body {
     color           : rgba(255, 255, 255, 0.3);
 }
 
-/* Images */
 .page-header-logo {
     display  : block;
     max-width: 100%;
@@ -484,7 +480,6 @@ body {
     height   : auto;
     margin   : 0 0 61px 0;
     padding  : 0;
-
 }
 
 .advantages-image {
@@ -613,6 +608,18 @@ body {
 
 .navigation-user-link:active .navigation-icon {
     fill: rgba(117, 98, 87, 0.3);
+}
+
+.favorities-navigation-user-link:hover .navigation-icon {
+    fill: #756257;
+}
+
+.favorities-navigation-user-link:active .navigation-icon {
+    fill: rgba(117, 98, 87, 0.3);
+}
+
+.favorities-navigation-user-link:active .favorities-number {
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .favorities-navigation-user-link {
@@ -753,7 +760,6 @@ body {
     color  : #ffffff;
 }
 
-/* Colors */
 .dark-blue {
     background-color: #83B3D3;
 }
@@ -1021,10 +1027,19 @@ body {
     background: rgba(255, 255, 255, 0.6)
 }
 
-.control:focus .control-mark {
+.control:focus-visible .control-mark {
     background: rgba(255, 255, 255, 0.6);
-    border    : 3px solid #83B3D3;
 }
+
+.control:active .control-mark {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.control-input[type="checkbox"]:focus+.control-mark,
+.control-input[type="radio"]:focus+.control-mark {
+    outline: 3px solid #83B3D3;
+}
+
 
 .control-input:disabled+.control-mark {
     background: rgba(255, 255, 255, 0.3);
@@ -1178,16 +1193,33 @@ body {
     margin    : 0;
 }
 
-.range-input:hover {
-    border: 2px solid rgba(255, 255, 255, 0.6)
+.range-input-min:hover {
+    border       : 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 4px 0px 0px 4px;
 }
 
-.range-input:focus {
+.range-input-min:focus {
     outline       : 3px solid #81B3D2;
     outline-offset: 0;
+    border-radius : 4px 0px 0px 4px;
 }
 
-.range-input:active {
+.range-input-min:active {
+    background-color: #756257;
+}
+
+.range-input-max:hover {
+    border       : 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 0 4px 4px 0;
+}
+
+.range-input-max:focus {
+    outline       : 3px solid #81B3D2;
+    outline-offset: 0;
+    border-radius : 0 4px 4px 0;
+}
+
+.range-input-max:active {
     background-color: #756257;
 }
 
@@ -1330,8 +1362,13 @@ body {
 }
 
 .select-control:hover,
-.select-control:focus {
+.select-control:focus-visible {
     border: 2px solid #83B3D3;
+}
+
+.select-control:focus-visible {
+    border : 2px solid #83B3D3;
+    outline: none;
 }
 
 .select-control:active {
@@ -1395,7 +1432,8 @@ body {
 }
 
 .card-grid-toggle:focus-visible {
-    border: 3px solid #83B3D3;
+    border : 3px solid #83B3D3;
+    outline: none;
 }
 
 .hotel-list {
@@ -1594,7 +1632,7 @@ body {
     border-bottom: 1px solid #E6E6E6;
     padding      : 30px 0 30px 0;
     width        : 1056px;
-    margin       : 0 auto 21px;
+    margin       : 0 auto 28px;
 }
 
 .button-pagination-show-more {
@@ -1736,7 +1774,7 @@ body {
     text-align: center;
     display   : block;
     padding   : 0 200px 0 200px;
-    margin    : 0 auto 165px;
+    margin    : 0 auto 169px;
     height    : max-content;
 }
 
@@ -1854,7 +1892,6 @@ body {
     list-style-type: none;
 }
 
-
 .footer-social-link {
     display        : flex;
     align-items    : center;
@@ -1890,7 +1927,6 @@ body {
     max-width      : 100%;
     margin         : 0 0 0 -11px;
 }
-
 
 .footer-copyright {
     display        : flex;
