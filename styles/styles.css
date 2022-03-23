@@ -297,9 +297,32 @@ body {
     fill: #000000;
 }
 
-.button-quantity-change:focus {
-    outline       : 3px solid #83B3D3;
+.button-plus:focus-visible {
+    outline: none;
+   }
+
+.button-plus:focus-visible .button-quantity-change {
+    outline       : 3px solid #83B3D3;    
     border-radius: 4px;    
+}
+
+.button-minus:focus-visible {
+    outline: none;
+   }
+
+.button-minus:focus-visible .button-quantity-change {
+    outline       : 3px solid #83B3D3;    
+    border-radius: 4px;    
+}
+
+.button-quantity-change:active .quantity-change-icon {
+    fill: #000000;
+    opacity: 0.2;
+}
+
+.button-quantity-change:active .quantity-change-icon-plus {
+    fill: #000000;
+    opacity: 0.2;
 }
 
 .quantity-change-icon {
