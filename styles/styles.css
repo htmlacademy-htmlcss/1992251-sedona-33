@@ -293,16 +293,25 @@ body {
     fill: #000000;
 }
 
-.button-quantity-change:focus .quantity-change-icon {
-    fill         : #000000;
-    outline      : 3px solid #83B3D3;
-    border-radius: 4px;
+.button-quantity-change:hover .quantity-change-icon-plus {
+    fill: #000000;
+}
+
+.button-quantity-change:focus {
+    outline       : 3px solid #83B3D3;
+    border-radius: 4px;    
 }
 
 .quantity-change-icon {
     fill  : rgba(0, 0, 0, 0.3);
     width : 13px;
     height: 1px;
+}
+
+.quantity-change-icon-plus {
+    fill  : rgba(0, 0, 0, 0.3);
+    width : 13px;
+    height: 13px;
 }
 
 .button-plus {
@@ -429,9 +438,9 @@ body {
 }
 
 .appointment-submit-modal:focus-visible {
+    position      : relative;
     outline       : 3px solid #756257;
     outline-offset: 0;
-    position      : relative;
 }
 
 .appointment-submit-modal:active {
